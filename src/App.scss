@@ -1,0 +1,175 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 2%;
+
+  
+
+  .maincontent {
+    /* From https://css.glass */
+background: rgba(255, 255, 255, 0.07);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.8px);
+-webkit-backdrop-filter: blur(5.8px);
+border: 1px solid rgba(255, 255, 255, 0.28);
+      // background-color: transparent;
+      color: black;
+      height: 350px;
+      width: 80%;
+      max-width: 100%;
+      // border-radius: 10px;
+      // border: 3px solid black;
+      font-size: 20px;
+      font-weight: 500;
+      padding: 2%;
+
+      .Gap {
+          font-size: 20px;
+         
+            line-height: 2;
+          
+      }
+  }
+
+  .h {
+      font-size: 4vw;
+      font-weight: 900;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      color: white;
+      text-shadow: 1px 4px 9px rgba(0,0,0,0.79);
+  
+  align-items: center;
+      .ani{
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+        background-color: transparent;
+        border: none;
+      }
+  }
+
+  
+  .buttons {
+      width: 80%;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 5%;
+      padding: 2%;
+
+      
+
+      button {
+          position: relative;
+          background-color: black;
+          border: none;
+          border-radius: 4em;
+          font-size: 20px;
+          color: white;
+          padding: 1% 2%;
+          cursor: pointer;
+          user-select: none;
+          text-align: center;
+          text-decoration: none;
+          cursor: pointer;
+          transition-duration: 0.4s;
+          -webkit-transition-duration: 0.4s;
+      }
+
+      button:hover {
+          transition-duration: 0.1s;
+          background-color: #3A3A3A;
+      }
+
+      button:after {
+          content: "";
+          display: block;
+          position: absolute;
+          border-radius: 4em;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          transition: all 0.5s;
+          box-shadow: 0 0 10px 40px rgb(100, 100, 100);
+      }
+
+      button:active:after {
+          box-shadow: 0 0 0 0 rgb(101, 101, 101);
+          position: absolute;
+          border-radius: 4em;
+          left: 0;
+          top: 0;
+          opacity: 1;
+          transition: 0s;
+      }
+
+      button:active {
+          top: 1px;
+      }
+  }
+
+  @media (max-width: 768px) {
+      
+        .maincontent {
+          width: 80%;
+      }
+
+      p{
+        max-width: calc(100vw - 20%);
+      }
+
+      .h {
+          font-size: 5vw;
+      }
+
+      .buttons {
+          width: 90%;
+          button {
+            margin-top: 20px;
+              font-size: 2vw;
+              border-radius: 8px;
+          }
+      }
+     
+  }
+
+  @media (max-width: 480px) {
+      .maincontent {
+          width: 80%;
+          height: 400px;
+      }
+
+      p{
+        max-width: calc(100vw - 20%);
+      }
+
+      .h {
+        margin-top: 50px;
+          font-size: 7vw;
+
+          .ani{
+            width: 40px;
+        height: 40px;
+          }
+      }
+
+      .buttons {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: left;
+          button {
+            margin-top: 20px;
+              font-size: 3vw;
+              border-radius: 5px;
+          }
+      }
+  }
+}
